@@ -6,17 +6,18 @@ Welcome to my DSA Showcase! This repository highlights my skills in solving comp
 
 ---
 
-### 1. **Minesweeper Backtracking Solver**
-**Objective:** Solve an *n × n* Minesweeper grid using backtracking based on numeric clues.
+### 1. Minesweeper Backtracking Solver  
+**Objective:** Solve an n × n Minesweeper board by placing bombs using recursive backtracking based on numeric clues.
 
 **Key Highlights:**
-- Designed a `Node` class to represent grid values and determine valid bomb placements.
-- Built a **recursive backtracking engine** to explore and undo configurations based on validity.
-- Visualized the **step-by-step bomb placement** process using **Malena** and **SFML**.
-- Focused on **recursive search**, **state management**, and **iterator patterns**.
+- Implemented a `Node` class to represent numbers on the grid and generate valid bomb placement combinations.
+- Built a `Model` class to store the board state, nodes, and every step for visualization.
+- Developed a `Backtracking` class with a recursive `solve(index)` method to place bombs, validate the state, and backtrack when needed.
+- Visualized the solving process using SFML and the Malena framework, highlighting placement attempts and reversals.
+- Integrated iterator patterns to efficiently cycle through bomb combinations.
 
 **Challenge:**  
-Managing the **exponential complexity** of placement combinations while maintaining a smooth and informative visual trace.
+Efficiently exploring exponential bomb combinations while maintaining correct state and rendering a smooth, step-by-step visual trace.
 
 ---
 
