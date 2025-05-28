@@ -1,0 +1,14 @@
+# Target labels
+ ogg-populate
+# Source files and their labels
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/CMakeFiles/ogg-populate-complete.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-build.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-configure.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-download.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-install.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-mkdir.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-patch.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-test.rule
+/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/ogg-subbuild/ogg-populate-prefix/src/ogg-populate-stamp/ogg-populate-update.rule
