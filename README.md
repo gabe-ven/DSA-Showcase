@@ -1,6 +1,6 @@
 # Data Structures & Algorithms Showcase
 
-Welcome to my DSA Showcase! This repository highlights my skills in solving complex algorithmic problems and building interactive applications using advanced data structures and algorithms. Each project includes visualizations powered by the **Malena framework** (developed by Professor Dave Smith) and **SFML**, illustrating the internal workings of each solution.
+Welcome to my DSA Showcase! This repository highlights my skills in solving complex algorithmic problems and building interactive applications using advanced data structures and algorithms. Each project includes visualizations powered by the [Malena framework](https://github.com/daversmith/Malena) (developed by Professor Dave Smith) and **SFML**, illustrating the internal workings of each solution.
 
 ## 📌 Projects Overview
 
