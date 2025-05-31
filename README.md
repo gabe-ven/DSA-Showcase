@@ -18,6 +18,7 @@ Welcome to my DSA Showcase! This repository highlights my skills in solving comp
 
 **Challenge:**  
 Efficiently exploring exponential bomb combinations while maintaining correct state and rendering a smooth, step-by-step visual trace.
+
 ![ezgif-3ac16f87d7b6b9](https://github.com/user-attachments/assets/a8803090-dc38-4c22-bdba-e677669f17ae)
 
 
