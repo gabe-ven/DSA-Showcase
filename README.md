@@ -18,6 +18,8 @@ Welcome to my DSA Showcase! This repository highlights my skills in solving comp
 
 **Challenge:**  
 Efficiently exploring exponential bomb combinations while maintaining correct state and rendering a smooth, step-by-step visual trace.
+![minesweeper gif](https://github.com/user-attachments/assets/b06797a9-8a60-45ed-b103-31926100a6bb/minesweeper.gif)
+
 
 ---
 
@@ -32,6 +34,7 @@ Efficiently exploring exponential bomb combinations while maintaining correct st
 
 **Challenge:**  
 Optimizing **heuristic design** to balance **accuracy** and **computational overhead**.
+![slidingpuzzle gif](https://github.com/user-attachments/assets/473873e1-1670-4a0f-a592-41edd33c28a1/slidingpuzzle.gif)
 
 ---
 
@@ -47,6 +50,7 @@ Optimizing **heuristic design** to balance **accuracy** and **computational over
 
 **Challenge:**  
 Designing a **responsive**, **modular system** where multiple classes work together **seamlessly**, while optimizing **edit distance calculations** for performance.
+![autocorrect gif](https://github.com/user-attachments/assets/4ec5022d-6b64-467d-99d4-b8b8d44b89bb/autocorrect.gif)
 
 ---
 
@@ -61,3 +65,4 @@ Designing a **responsive**, **modular system** where multiple classes work toget
 
 **Challenge:**  
 Accurately modeling **DFA transitions** and integrating **keyword filtering** without lagging the user experience.
+![statemachine gif](https://github.com/user-attachments/assets/558af77b-8626-401e-9cab-5e13c275e2d9/statemachine.gif)
