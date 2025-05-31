@@ -34,6 +34,7 @@ Efficiently exploring exponential bomb combinations while maintaining correct st
 
 **Challenge:**  
 Optimizing **heuristic design** to balance **accuracy** and **computational overhead**.
+
 ![ezgif-298a83a437a354](https://github.com/user-attachments/assets/eade75cd-e8f8-4c4f-aeae-ca3865c9fe75)
 
 ---
@@ -50,6 +51,7 @@ Optimizing **heuristic design** to balance **accuracy** and **computational over
 
 **Challenge:**  
 Designing a **responsive**, **modular system** where multiple classes work together **seamlessly**, while optimizing **edit distance calculations** for performance.
+
 ![ezgif-2d852957ada9e3](https://github.com/user-attachments/assets/2697a0af-9140-43cf-a6cc-444ba47658d6)
 
 ---
@@ -65,4 +67,5 @@ Designing a **responsive**, **modular system** where multiple classes work toget
 
 **Challenge:**  
 Accurately modeling **DFA transitions** and integrating **keyword filtering** without lagging the user experience.
+
 ![ezgif-27e264478ef653](https://github.com/user-attachments/assets/7571f356-c008-4c94-9b23-dc1c415acfb6)
