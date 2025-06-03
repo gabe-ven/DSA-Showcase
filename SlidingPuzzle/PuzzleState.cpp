@@ -13,16 +13,16 @@ PuzzleState::PuzzleState(const std::vector<int> &b) : board(b) {
     }
 }
 
-std::vector<PuzzleState> PuzzleState::a_star(const PuzzleState& start, const PuzzleState& goal) {
+std::vector<PuzzleState> PuzzleState::aStar(const PuzzleState& start, const PuzzleState& goal) {
     // Node is what is stored in the queue
     // CompareNode is the struct that decides how to compare two Nodes
     // Node with smallest f value has highest priority
-    std::priority_queue<Node, std::vector<Node>, CompareNode> to_explore;
+    std::priority_queue<Node, std::vector<Node>, CompareNode> unvisited;
 
     // closed set to keep track of visited puzzles
     // stores each Puzzle as a state
     // Hash is custom function so Puzzle objects can be stored and looked up in the set
-    std::unordered_set<PuzzleState, Hash> explored;
+    std::unordered_set<PuzzleState, Hash> visited;
 
     // maps for cost tracking and path reconstruction
     // Puzzle (key) - the current puzzle state you're tracking cost for
@@ -33,73 +33,67 @@ std::vector<PuzzleState> PuzzleState::a_star(const PuzzleState& start, const Puz
     // Puzzle (key) - current puzzle state
     // Puzzle (value) - the previous puzzle state on current best path
     // Hash - custom function for Puzzle keys
-    std::unordered_map<PuzzleState, PuzzleState, Hash> paths;
+    std::unordered_map<PuzzleState, PuzzleState, Hash> prev;
 
     g[start] = 0;
-    int h = start.manhattan_distance(goal.board);
-    to_explore.push(Node(start, 0, h)); // this is f
+    int h = start.manhattanDistance(goal.board);
+    unvisited.push(Node(start, 0, h)); // f = g + h
 
-    while (!to_explore.empty()) {
-        Node current = to_explore.top(); // neighbor with the lowest f
-        to_explore.pop();
+    while (!unvisited.empty()) {
+        Node current = unvisited.top(); // neighbor with the lowest f
+        unvisited.pop();
 
         PuzzleState currentState = current.s;
         // if we reached the goal, just return the path
         if (currentState == goal) {
-            return final_path(paths, currentState);
+            return finalPath(prev, currentState);
         }
 
-        // explored node
-        explored.insert(currentState);
+        // visited node
+        visited.insert(currentState);
 
         // generate all valid moves
         for (PuzzleState neighbor : currentState.getMoves()) {
             // calculate tentative cost from start to neighbor through current
-            int tentative_g = g[currentState] + 1; // each move is just 1
+            int tg = g[currentState] + 1; // each move is just 1
 
             // check if neighbor is already evaluated with a better score
-            if (g.find(neighbor) == g.end() || tentative_g < g[neighbor]) {
+            if (!g.count(neighbor) || tg < g[neighbor]) {
                 // this path to neighbor is better than any previous one
-                g[neighbor] = tentative_g;  // update cost to reach neighbor
-                int h = neighbor.manhattan_distance(goal.board);  // heuristic estimate to goal
+                g[neighbor] = tg;  // update cost to reach neighbor
+                int h = neighbor.manhattanDistance(goal.board);  // heuristic estimate to goal
 
-                paths[neighbor] = currentState;  // remember path
+                prev[neighbor] = currentState;  // remember path
 
                 // push neighbor to open_set (priority queue)
-                to_explore.push(Node(neighbor, tentative_g, h));
+                unvisited.push(Node(neighbor, tg, h));
             }
         }
     }
     return {};
 }
 
-int PuzzleState::manhattan_distance(const std::vector<int>& goal_board) const {
-    int distance = 0;
+int PuzzleState::manhattanDistance(const std::vector<int>& board) const {
+    int dist = 0;
 
-    std::vector<std::pair<int, int>> goal_positions(N * N);
-
-    // precompute goal positions
-    for (int i = 0; i < N * N; i++) {
-        goal_positions[goal_board[i]] = {i / N, i % N};
-    }
-
-    // loop through board
     for (int i = 0; i < N * N; i++) {
         int tile = board[i];
-        // skip empty tile
         if (tile == 0) {
             continue;
         }
 
-        // add how far this tile is from the goal to total distance
-        // do this for ALL board states
-        distance += abs((i % N) - (goal_positions[tile].second)) + abs((i / N) - (goal_positions[tile].first));
+        int curr_row = i / N;
+        int curr_col = i % N;
+        int goal_row = (tile - 1) / N;
+        int goal_col = (tile - 1) % N;
+
+        dist += abs(curr_row - goal_row) + abs(curr_col - goal_col);
     }
 
-    return distance;
+    return dist;
 }
 
-std::vector<PuzzleState> PuzzleState::final_path(const std::unordered_map<PuzzleState, PuzzleState, Hash>& paths, PuzzleState current) {
+std::vector<PuzzleState> PuzzleState::finalPath(const std::unordered_map<PuzzleState, PuzzleState, Hash>& paths, PuzzleState current) {
     std::vector<PuzzleState> total_path;
     total_path.push_back(current);
 

@@ -12,6 +12,8 @@ FetchContent_MakeAvailable(malena)
 
 add_executable(${PROJECT_NAME}
     main.cpp
+    Home/Home.cpp
+    Home/Home.h
     Minesweeper/Minesweeper.cpp
     Minesweeper/Minesweeper.h
     Minesweeper/Node.cpp
@@ -38,11 +40,9 @@ add_executable(${PROJECT_NAME}
     SlidingPuzzle/Puzzle.h
     SlidingPuzzle/Node.cpp
     SlidingPuzzle/Node.h
-        SlidingPuzzle/PuzzleState.cpp
-        SlidingPuzzle/PuzzleState.h
-        SlidingPuzzle/Constants.h
-
-
+    SlidingPuzzle/PuzzleState.cpp
+    SlidingPuzzle/PuzzleState.h
+    SlidingPuzzle/Constants.h
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Malena::Malena)

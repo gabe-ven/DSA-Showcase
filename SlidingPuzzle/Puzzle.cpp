@@ -39,7 +39,7 @@ void Puzzle::initialization() {
     setupGrid();
     updateDisplay(start_board);
 
-    solutionPath = PuzzleState::a_star(start, goal);
+    solutionPath = PuzzleState::aStar(start, goal);
     step = 0;
     clock.restart();
 
@@ -50,13 +50,14 @@ void Puzzle::initialization() {
 
 void Puzzle::createTiles() {
     tiles.clear();
-    texts.clear();
 
     // create exactly 8 tiles (numbers 1-8) once
     for (int value = 1; value <= 8; value++) {
         // create tile
-        auto* tile = new ml::Rectangle();
+        auto* tile = new ml::RectangleButton(font);
         tile->setSize({TILE_SIZE, TILE_SIZE});
+        tile->setCharacterSize(40);
+        tile->setString(std::to_string(value));
 
         // set color based on value
         if (value >= 1 && value <= 3)
@@ -66,24 +67,8 @@ void Puzzle::createTiles() {
         else if (value >= 7 && value <= 8)
             tile->setFillColor(sf::Color(247, 90, 90));
 
-
         tiles.push_back(tile);
-
-        // create text
-        auto* text = new ml::Text(font);
-        text->setString(std::to_string(value));
-        text->setCharacterSize(TEXT_SIZE);
-        text->setFillColor(sf::Color::White);
-
-        // position text in center
-        sf::FloatRect bounds = text->getLocalBounds();
-        text->setOrigin({bounds.position.x + bounds.size.x / 2.f,
-                         bounds.position.y + bounds.size.y / 2.f});
-        texts.push_back(text);
-
-        // add to application
         addComponent(*tile);
-        addComponent(*text);
     }
 }
 
@@ -94,15 +79,13 @@ void Puzzle::setupGrid() {
 
     // create placeholders for where the tiles will go
     for (int i = 0; i < N * N; i++) {
-        auto* placeholder = new ml::Rectangle();
+        auto* placeholder = new ml::RectangleButton(font);
         placeholder->setSize({TILE_SIZE, TILE_SIZE});
         placeholder->setFillColor(sf::Color::Transparent);
         grid.addComponent(*placeholder);
     }
-
     grid.addToApplication(*this);
 }
-
 
 void Puzzle::updateDisplay(const std::vector<int>& board) {
     for (int i = 0; i < N * N; i++) {
@@ -118,7 +101,6 @@ void Puzzle::updateDisplay(const std::vector<int>& board) {
 
         int index = value - 1;
         tiles[index]->setPosition({x, y});
-        texts[index]->setPosition({x + TILE_SIZE / 2, y + TILE_SIZE / 2 - SPACING});
     }
 }
 

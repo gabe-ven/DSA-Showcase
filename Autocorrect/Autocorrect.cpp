@@ -5,7 +5,8 @@
 Autocorrect::Autocorrect()
     : Application(sf::VideoMode({720, 420}, 32), "Autocorrect") {
     setBackground(sf::Color(134, 210, 147));
-    font = ml::FontManager::getFont(ml::FontManager::ARIAL);
+    ml::FontManager::loadFontFromFile("roboto", "../fonts/Roboto-VariableFont_wdth,wght.ttf");
+    font = ml::FontManager::getFont("roboto");
     wordSort = new WordSort("5000-baby-girl-names.txt", font);
 }
 
@@ -89,6 +90,7 @@ void Autocorrect::updateSuggestions(const std::string& input) {
             // create new word based off the current top word
             Word* w = new Word(topWords[i].getString(), font);
             w->setCharacterSize(30);
+            w->setFont(font);
             w->setFillColor(sf::Color::White);
             w->setPosition({x, y});
             addComponent(*w);

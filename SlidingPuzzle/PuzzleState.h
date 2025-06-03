@@ -20,14 +20,13 @@ public:
     PuzzleState();
     PuzzleState(const std::vector<int>& b);
 
-    static std::vector<PuzzleState> a_star(const PuzzleState& start, const PuzzleState& goal);
-    int manhattan_distance(const std::vector<int>& goal_board) const;
-    static std::vector<PuzzleState> final_path(const std::unordered_map<PuzzleState, PuzzleState, Hash>& paths, PuzzleState current);
+    static std::vector<PuzzleState> aStar(const PuzzleState& start, const PuzzleState& goal);
+    int manhattanDistance(const std::vector<int>& board) const;
+    static std::vector<PuzzleState> finalPath(const std::unordered_map<PuzzleState, PuzzleState, Hash>& paths, PuzzleState current);
 
     std::vector<PuzzleState> getMoves() const;
     const std::vector<int>& getBoard() const { return board; }
     bool operator==(const PuzzleState& other) const { return board == other.board; }
-
 };
 
 struct Hash {

@@ -24,8 +24,7 @@ class Puzzle : public ml::Application {
     ml::Grid grid;
     sf::Font font;
 
-    std::vector<ml::Rectangle*> tiles;
-    std::vector<ml::Text*> texts;
+    std::vector<ml::RectangleButton*> tiles;
 
 
 public:

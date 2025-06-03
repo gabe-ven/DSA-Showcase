@@ -1,13 +1,10 @@
 #include <iostream>
-#include "Autocorrect/Autocorrect.h"
-#include "StateMachine/StateMachine.h"
-#include "Minesweeper/Minesweeper.h"
-#include "SlidingPuzzle/Puzzle.h"
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "Home/Home.h"
+
 int main() {
-    Puzzle p;
-    p.run();
+    Home home;
+    home.run();
+    return 0;
 }
 
 // TIP See CLion help at <a

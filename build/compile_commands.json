@@ -7,6 +7,12 @@
 },
 {
   "directory": "/Users/gabrielvenezia/CLionProjects/DSAShowcase/build",
+  "command": "/usr/bin/clang++ -DSFML_STATIC -I/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/malena-src/include -isystem /Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -o CMakeFiles/DSAShowcase.dir/Home/Home.cpp.o -c /Users/gabrielvenezia/CLionProjects/DSAShowcase/Home/Home.cpp",
+  "file": "/Users/gabrielvenezia/CLionProjects/DSAShowcase/Home/Home.cpp",
+  "output": "CMakeFiles/DSAShowcase.dir/Home/Home.cpp.o"
+},
+{
+  "directory": "/Users/gabrielvenezia/CLionProjects/DSAShowcase/build",
   "command": "/usr/bin/clang++ -DSFML_STATIC -I/Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/malena-src/include -isystem /Users/gabrielvenezia/CLionProjects/DSAShowcase/build/_deps/sfml-src/include -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -o CMakeFiles/DSAShowcase.dir/Minesweeper/Minesweeper.cpp.o -c /Users/gabrielvenezia/CLionProjects/DSAShowcase/Minesweeper/Minesweeper.cpp",
   "file": "/Users/gabrielvenezia/CLionProjects/DSAShowcase/Minesweeper/Minesweeper.cpp",
   "output": "CMakeFiles/DSAShowcase.dir/Minesweeper/Minesweeper.cpp.o"
