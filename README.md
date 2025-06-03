@@ -1,6 +1,6 @@
 # Data Structures & Algorithms Showcase
 
-Welcome to my DSA Showcase! This repository highlights my skills in solving complex algorithmic problems and building interactive applications using advanced data structures and algorithms. Each project includes visualizations powered by the **Malena framework** (developed by Professor Dave Smith) and **SFML**, illustrating the internal workings of each solution.
+Welcome to my DSA Showcase! This repository highlights my skills in solving complex algorithmic problems and building interactive applications using advanced data structures and algorithms. Each project includes visualizations powered by the [Malena framework](https://github.com/daversmith/Malena) (developed by Professor Dave Smith) and **SFML**, illustrating the internal workings of each solution.
 
 ## 📌 Projects Overview
 
@@ -19,9 +19,12 @@ Welcome to my DSA Showcase! This repository highlights my skills in solving comp
 **Challenge:**  
 Efficiently exploring exponential bomb combinations while maintaining correct state and rendering a smooth, step-by-step visual trace.
 
+![ezgif-3ac16f87d7b6b9](https://github.com/user-attachments/assets/a8803090-dc38-4c22-bdba-e677669f17ae)
+
+
 ---
 
-### 2. **Sliding Puzzle Solver (8-Puzzle / 15-Puzzle)**
+### 2. **Sliding Puzzle Solver (3x3)**
 **Objective:** Use the **A\*** search algorithm to solve classic sliding puzzles efficiently.
 
 **Key Highlights:**
@@ -32,6 +35,8 @@ Efficiently exploring exponential bomb combinations while maintaining correct st
 
 **Challenge:**  
 Optimizing **heuristic design** to balance **accuracy** and **computational overhead**.
+
+![ezgif-298a83a437a354](https://github.com/user-attachments/assets/eade75cd-e8f8-4c4f-aeae-ca3865c9fe75)
 
 ---
 
@@ -48,6 +53,8 @@ Optimizing **heuristic design** to balance **accuracy** and **computational over
 **Challenge:**  
 Designing a **responsive**, **modular system** where multiple classes work together **seamlessly**, while optimizing **edit distance calculations** for performance.
 
+![ezgif-2d852957ada9e3](https://github.com/user-attachments/assets/2697a0af-9140-43cf-a6cc-444ba47658d6)
+
 ---
 
 ### 4. **C++ Variable Identifier Validator (Finite State Machine)**
@@ -61,3 +68,5 @@ Designing a **responsive**, **modular system** where multiple classes work toget
 
 **Challenge:**  
 Accurately modeling **DFA transitions** and integrating **keyword filtering** without lagging the user experience.
+
+![ezgif-27e264478ef653](https://github.com/user-attachments/assets/7571f356-c008-4c94-9b23-dc1c415acfb6)
